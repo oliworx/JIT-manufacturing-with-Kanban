@@ -1,0 +1,68 @@
+% Kompilieren mit TeXworks/ XeLaTeX
+\documentclass[12pt,german,a4paper]{scrartcl}
+
+% Abstand des Textes vom Rand sollte sich an folgenden Richtwerten orientieren: 
+%     a.  Oben: 3 cm, Seitenzahl steht 1,5 cm von der oberen Papierkante 
+%     b.  Unten: 2 cm (letzte Zeile der letzten Fußnote bis untere Papierkante) 
+%     c.  Links: 4 cm 
+%     d.  Rechts: 2 cm  
+%
+% Mit  Ausnahme  des  Titelblatts  sind  alle  Seiten  der  Arbeit  fortlaufend  innerhalb 
+% der  oberen  Kopfzeile  zu  nummerieren.  Dabei  sind,  beginnend  mit  der  ersten 
+% Seite  des  Inhaltsverzeichnisses, sämtliche  Verzeichnisse  vor  dem  Textteil  mit 
+% römischen  Ziffern  fortlaufend  durchzunummerieren.  Beginnend  mit  der  ersten 
+% Seite des Textteils werden alle Seiten – mit Ausnahme der ehrenwörtlichen Er-
+% klärung – mit arabischen Ziffern fortlaufend nummeriert (neu beginnend mit „1“). 
+
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+
+% Seitenzahlen oben zentriert
+\usepackage{scrpage2} 
+\clearscrheadfoot 
+\chead[\pagemark]{ \pagemark} 
+\pagestyle{scrheadings} 
+
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% wegen deutschen Umlauten
+\usepackage[utf8]{inputenc}
+
+% 1,5-zeilig
+\usepackage{setspace}
+\onehalfspacing
+
+% chinesische Zeichen
+\usepackage{xltxtra} 
+\newfontfamily\CN{SimSun}
+
+% Abkürzungsverzeichnis
+\usepackage{acronym}
+
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+% \usepackage{color}
+
+ % kein Abstand bei Listen zwischen den Items
+\setlist{nolistsep,partopsep=0pt}
+
+% keine Einrückung bei Absätzen
+\setlength{\parindent}{0pt} 
+
+\addtokomafont{sectioning}{\rmfamily}
+
+% hier beginnt das Dokument
+\begin{document}
+
+% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+\bibliographystyle{alphadin}
+
+\input{titelblatt}
+\input{verzeichnisse}
+\input{text}
+\input{anhang}
+\input{literatur}
+\input{ehrenwort}
+
+\end{document}

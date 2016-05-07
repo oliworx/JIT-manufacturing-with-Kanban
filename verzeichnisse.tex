@@ -1,0 +1,31 @@
+%Verzeichnisse
+
+% vor dem Hauptteil römische Seitenzahlen verwenden
+\pagenumbering{Roman}
+\newpage
+% dies ist die erste Seite bezüglich der Seitenzahlen
+\setcounter{page}{1}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Abkürzungsverzeichnis
+\phantomsection \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}[Xerox PARC] % für die Ausrichtung die längste Abk. hier in eckigen Klammern
+ \acro{ASA}{American Standards Association, Vorläuferorganisation von ANSI}
+
+\end{acronym}
+
+% ggf. Abbildungsverzeichnis auf eine neue Seite
+ \newpage 
+ \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+ \listoffigures
+
+% ggf. Tabellenverzeichnis
+% \addcontentsline{toc}{section}{Tabellenverzeichnis}
+% \listoftables
+
+\newpage
+\pagenumbering{arabic}
