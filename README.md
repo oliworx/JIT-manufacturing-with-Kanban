@@ -1,4 +1,4 @@
-Implementation of Just in time prosuction tith Kanban
+Implementation of Just-in-time production with Kanban
 =====================================================
 
 project paper / Seminararbeit: _Implementierung der Just-in-time-Produktion mittels Kanban
