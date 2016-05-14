@@ -71,18 +71,61 @@ Die Karten der leeren Behälter werden hier für jeden sichtbar plaziert, so das
 
 \section{Einführung von Kanban}
 \subsection{Problemstellung}
-Motivation: \\
-- hoher Aufwand herkömmlicher PPS-Systeme\\
-- Flexibilität und Lieferfähigkeit erhöhen\\
-- Übereinstimmung des tatsächlichem Bestandes mit dem Bestand in der IT\\
-- Reduzierung von Umlaufvermögen und Durchlaufzeiten\\
-- Minimierung von Verlusten durch Verschwendung und Ausschuss\\
+Die Motivation für die Einführung der Just-in-Time-Produktion ist ist heute die gleiche wie im 20. Jahrhundert bei Toyota.
+Bei gleichbleibend hoher Qualität sollen Lieferfähigkeit und Flexibilität gesteigert werden.
+Ebenso sollen Durchlaufzeiten und Umlaufvermögen reduziert werden.\footnote{vgl. \cite{Geiger2011Kanban} S.12}
+Hinzu kommt heute noch, dass herkömmliche PPS-Systeme einen hohen Aufwand bedeuten, 
+sowohl bei der Produktionsplanung als auch bei der Erfassung von Daten zu Lagerbeständen und produzierten Gütern.
+Dabei sind die eingesetzten IT-Systeme oft zu unflexibel und zu theoretisch.\footnote{vgl. \cite{Weber2014KE} S.1}\\
+Trotz Einsatz moderner Technik kommt es zu Unstimmigkeiten von tatsächlichem und theoretischem Bestand, 
+was eine Störung der Produktion zur Folge haben kann.
+Diese nicht wertschöpfenden Tätigkeiten können durch die Einrichtung der selbstregelnden 
+Steuerkreise eines Kanban-Systems eliminiert oder zumindest stark reduziert werden.\footnote{vgl. \cite{Geiger2011Kanban} S.13}\\
+
+\subsection{Vorgehensweise}
+Die Einführung der JIT-Fertigung nach dem Kanban-System sollte immer schrittweise erfolgen,
+so hat man die Möglichkeit, zuerst in einem kleinen Teilbereich Erfahrung zu 
+sammeln und eventuell bereite erste Verbesserungen vorzunehmen. 
+Dabei fängt man gemäß dem Pull-Prinzip am Ende der Wertschöpfungskette an, 
+also dem Fertigteilelager oder der Endfertigung. Schrittweise wird das Kanban-System 
+dann auf die vorgelagerten Produktionstufen ausgeweitet, um zuletzt auch die Lieferanten einzubeziehen.\footnote{vgl. \cite{Takeda2012SPS} S.194}
+Von allen Beteiligten müssen die Kanban-Regeln verstanden sein und eingehalten werden. 
+Günstig ist es, die Regeln in einfacher Form für jeden sichtbar darzustellen und hier auch den 
+Kanban-Beauftragten als Ansprechpartner bei Fragen und Problemen zu benennen.
+
 \subsection{Kanban-Fähigkeit}
+\subsubsection{Kanban-Teile}
+Für Kanban eignen sich grundsätzlich A-, B- und C-Teile, wobei sich bei den sehr 
+werthaltigen A-Teilen die Vorteile von Kanban am ehesten zeigen. \footnote{vgl. \cite{Geiger2011Kanban} S.29}
+Die infrage kommenden Teile müssen auch einer XYZ-Analyse unterzogen werden. 
+Teile mit gleichmäßiger (X) oder moderat schwankender (Y) Nachfrage eignen sich gut für die JIT-Fertigung mit Kanban.
+Selten produzierte Teile und Teile mit stark schwankender Nachfrage hingegen sind nicht geeignet und sollten 
+weiterhin der herkömmlichen Fertigungsplanung unterliegen. Die starken Nachfrageschwankungen 
+würden die vorgelagerten Regelkreise stören und damit die Produktion der anderen Teile gefährden.\footnote{vgl. \cite{Geiger2011Kanban} S.27}
+
+\subsubsection{Verkleinerung der Losgrösse und Verkürzung der Rüstzeiten}
+Um die erforderliche Flexibilität an den einzelnen Fertigungsstufen zu erreichen, 
+muss von der Optimierung der Losgrößen Abstand genommen werden.\footnote{vgl. \cite{Takeda2012SPS} S.68 f.}
+Andernfalls ist es nicht möglich, die benötigten Teile nur in der benötigten Menge zum geforderten Zeitpunkt herzustellen.
+Der Kurvenverlauf der Gesamtkosten ist bei der 'optimalen Losgröße' relativ flach, 
+so dass mit nur geringen Mehrkosten die Losgröße deutlich reduziert werden kann.\footnote{vgl. \cite{Geiger2011Kanban} S.37}
+(s. Abbildung \ref{Losgroesse})
+\begin{figure}[h]
+\centering
+\includegraphics[width=.60\textwidth]{img/losgroessenverkleinerung.png}
+\caption[Kosten bei Verkleinerung der Losgröße]{Kosten bei Verkleinerung der Losgröße\footnotemark}
+\label{Losgroesse}
+\end{figure}
+\footnotetext{eigene Darstellung}
+
+Letztlich muss aber auch daran gearbeitet werden, die Umrüstzeiten zu optimieren.
+So ist es zum Beispiel Toyota gelungen, in seinem Hauptwerk die Zeit für Umrüstungen von 
+2-3 Stunden in den 1940er Jahren auf nur 3 Minuten im Jahr 1971 zu reduzieren! \footnote{vgl. \cite{Ohno2013TPS} S.32f}
+
 \subsection{Auswahl der Regelkreise}
 \subsection{Berechnung der Kanban-Grössen}
 
-erfolgt schrittweise\\
-Überprüfung der Kanbanfähigkeit (ABC-Teile, XY-Teile)\\
+
 Glätten der Produktion, Verkleinerung der Losgrössen, Standardisierung der Teile (Takeda 2015, S. 7)\\
 zuerst in einem Teilbereich, ein Team von ca 10 Personen organisiert sich eigenständig, Dauer 6-12 Monate\\
 Höhe Verantwortung der einzelnen Mitarbeiter\\
