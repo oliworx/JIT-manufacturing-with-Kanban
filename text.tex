@@ -4,7 +4,7 @@ im internationalen Wettbewerb. Der Markt fordert hohe Flexibilität und Lieferf�
 wobei die Kosten immer weiter sinken sollen, um wettbewerbsfähig zu bleiben.
 Die japanische Firma Toyota hat diese Problematik für sich bereits in den 1950er
 Jahren erkannt und eigene Lösungen dafür gesucht. So ist schliesslich im Laufe der
-folgendenden Jahrzehnte das Toyota-Produktionssystem (TPS) entwickelt worden, dessen 
+folgendenden Jahrzehnte das \emph{Toyota-Produktionssystem} (TPS) entwickelt worden, dessen 
 wesentliche Bestandteile heute auch unter den Begriffen  \emph{Just-in-Time} oder  
  \emph{Lean-Production} bekannt sind. Ein wichtiger Bestandteil des TPS ist das
 Kanban-System, das vor allem von Taiichi Ohno entwickelt wurde.
@@ -37,9 +37,9 @@ Halde und damit verbunden übermässige Lagerhaltung. Dadurch wird Kapital gebun
 die Duchlaufzeiten erhöhen sich, durch Korrosion und häufigen Transport verschlechtert
 sich die Qualität der Zwischenerzeugnisse und möglicherweise müssen soger zu viel
 produzierte Teile weggeworfen werden. Bedingt durch die räumliche Enge stellt die 
-Lagerhaltung in Japan auch prinzipiell ein höheren Kostenfaktor dar als beispielsweise in der USA.
+Lagerhaltung in Japan auch prinzipiell ein höheren Kostenfaktor dar als beispielsweise in den USA.
 Künftig sollte bei Toyota die Fließproduktion \emph{Just-in-Time} erfolgen. 
-Das bedeuted, dass die für die Produktion benötigten Teile zur rechten Zeit und 
+Das bedeutet, dass die für die Produktion benötigten Teile zur rechten Zeit und 
 nur in der benötigten Menge am Fließband ankommen.
 Toyota kam dabei zu Gute, dass das Werk in einer Region mit vielen Zulieferer-Firmen (ein sog. Cluster der Autoindustrie)
 lag und die Anlieferung von Teilen daher schnell und kurzfristig möglich war. \footnote{vgl. \cite{Economist2009Ohno} S.36}
@@ -121,6 +121,24 @@ Dazu müssen sie entsprechend geschult werden und können mit Planspielen auf di
 Günstig ist es, die Regeln in einfacher Form für jeden sichtbar darzustellen und hier auch den 
 Kanban-Beauftragten als Ansprechpartner bei Fragen und Problemen zu benennen.
 
+\subsection{Kanban-Regeln}
+Die Regeln für die JIT-Fertigung mit Kanban müssen allen Beteiligten kommuniziert und klar gemacht werden.
+Für die Mitarbeiter in den Fertigungs-Teams können beispielsweise folgende Regeln vereinbart werden: \footnote{\cite{Weber2014KE} S.99}\\
+\begin{enumerate}
+\item Teile werden nur in festen Mengen bzw. Standardbehältern gelagert oder transportiert.
+\item Jedem Kanban-Behälter ist eine Kanban-Karte zugeordnet.
+\item Ist ein Kanban-Behälter geleert, so ist die Nachlieferung mit Hilfe der zugeordneten Kanban-Karte umgehend bei den betreffenden Lieferanten anzustoßen.
+\item Jede Kanban-Karte auf der Steuer-/Auslastungstafel gilt als Auftrag in der vorgegebenen Menge zum vorgegebenen Termin. Ohne Kanban-Karte keine Fertigung, kein Arbeitsprozess, kein Transport.
+\item Die Anzahl der Kanban-Karten darf nicht eigenmächtig verändert werden, es dürfen auch keine Änderungen der Daten auf der Kanban-Karte vorgenommen werden. Für die Pflege der Karten wird ein Karten-Pate bestimmt.
+\item Nur vollständige Kanban-Behälter mit fehlerfreien Teilen dürfen weitergegeben werden. Zu jedem Behälter gehört eine Kanban-Karte. Teile dürfen nur in den vorgeschriebenen Behältern aufbewahrt und geliefert werden. Nullfehler-Organisation / Mitarbeiter-Selbstkontrolle
+\item Kanban-Behälter dürfen nur an den zugewiesenen Plätzen abgestellt werden (Festplatzsystem). Kanban-Termine müssen zu 100\% eingehalten werden. Kanban-Aufträge haben immer höchste Priorität (Intercity-System).
+\item Die Kanban-Auslastungstafeln müssen einwandfrei geführt werden, bei Engpässen Meldung an Vorgesetzte.
+\item Den jeweiligen Fertigungsbeginn bestimmen die Mitarbeiter selbst gemäß festgelegter Lieferzeit auf der Kanban-Karte. Früher darf geliefert werden, später nie.
+\end{enumerate}
+Die einzelnen Details der Regeln sind natürlich den Gegebenheiten vor Ort anzupassen.
+Generell ist das Kanban-System flexibel und macht keine strikten Vorgaben für der konkreten Implementierung.
+Es muss gut funktionieren und sollte so einfach wie möglich gehalten werden.
+
 \subsection{Herstellen der Kanban-Fähigkeit}
 \subsubsection{Ermittlung der Kanban-Teile}
 Für Kanban eignen sich grundsätzlich A-, B- und C-Teile, wobei sich bei den sehr 
@@ -150,14 +168,14 @@ so dass mit nur geringen Mehrkosten die Losgröße deutlich reduziert werden kan
 
 Letztlich muss aber auch daran gearbeitet werden, die Umrüstzeiten zu optimieren.
 So ist es zum Beispiel Toyota gelungen, in seinem Hauptwerk die Zeit für Umrüstungen von 
-2-3 Stunden in den 1940er Jahren auf nur 3 Minuten im Jahr 1971 zu reduzieren! \footnote{vgl. \cite{Ohno2013TPS} S.32f}
+2-3 Stunden in den 1940er Jahren auf nur 3 Minuten im Jahr 1971 zu reduzieren. \footnote{vgl. \cite{Ohno2013TPS} S.32f}
 
 \subsection{Auswahl der Regelkreise}
 Hat man die Kanban-fähigen Teile identifiziert, so müssen als nächstes die Regelkreise festgelegt werden, welche mit dem Kanban-System gesteuert werden sollen.
-Dazu sollten zuerst von den betreffenden Abläufen Material- und Informationsflussdiagramme erstellt werden und die Prozessabläufe dargestellt werden.
+Dazu sollten zuerst von den betreffenden Abläufen Material- und Informationsflussdiagramme erstellt und die Prozessabläufe dargestellt werden.
 Hierbei kann bereits versucht werden, Optimierungsmöglichkeiten zu realisieren \footnote{vgl. \cite{Geiger2011Kanban} S.35}. 
 Schliesslich werden die am besten geeigneten Prozesse für die Kanban-Steuerung ausgewählt, 
-incl. Produzent und Verbraucher der Teile und ggf. der Zwischenlager.
+inkl. Produzent und Verbraucher der Teile und ggf. der Zwischenlager.
 
 \subsection{Ermittlung der Kanban-Größen}
 Für die Kanban-Steuerung sind diese Kennzahlen relevant: Losgröße, Wiederbeschaffungszeit, 
@@ -172,7 +190,7 @@ Für die \textbf{Wiederbeschaffungszeit} kann man die Erfahrungswerte mit den vo
 Falls die Teile extern eingekauft werden, so muss mit dem Lieferanten eine realistische Wiederbeschaffungszeit vereinbart werden.\\
 
 Der \textbf{Sicherheitsbestand} muss die Versorgung mit Teilen während der Wiederbeschaffungszeit ermöglichen.\\
-\centerline{\textit{SBZ = DV * ( WBZ + SZ )}}
+\centerline{\textit{SB = DV * ( WBZ + SZ )}}
 SB=Sicherheitsbestand\\
 DV=Durchschnittsverbrauch pro Zeiteinheit\\
 WBZ=Wiederbeschaffungszeit (in Zeiteinheiten)\\
@@ -197,7 +215,7 @@ so werden die Kanban gesammelt, bis die Losgröße erreicht ist.\\
 
 Die \textbf{Anzahl der Kanban} ergibt sich aus den anderen Größen:\footnote{vgl. \cite{Geiger2011Kanban} S.39}
 
-\centerline{\textit{AK = (DV * WBZ + (1 + SF) ) / SM}}
+\centerline{\textit{AK = (DV * WBZ * (1 + SF) ) / SM}}
 
  AK=Anzahl Kanban\\
  DV=Durchschnittsverbrauch pro Zeiteinheit\\
@@ -205,7 +223,7 @@ Die \textbf{Anzahl der Kanban} ergibt sich aus den anderen Größen:\footnote{vg
  SF = Sicherheitsfaktor\\
  SM = Standardmenge\\
 Auch diese Kennzahl sollte möglichst klein gehalten werden. Sind zu viele Kanban-Karten im Umlauf so 
-werden die Schwachstellen im Produktions-System durch zu hohe Lagerbestände überdeckt.
+werden die Schwachstellen im Produktionssystem durch zu hohe Lagerbestände überdeckt.
 
 Nach Einführung des Kanban-Systems sollten im Rahmen des \textit{kontinuierlichen Verbesserungsprozess} (KVP bzw. Kaizen) 
 durch den Kanban-Verantwortlicher die Kanban-Größen regelmäßig geprüft und korrigiert werden. 
@@ -221,7 +239,7 @@ Sind weitere Angaben für einen sicheren und zuverlässigen Ablauf erforderlich,
 Es gibt \textit{Produktions-Kanban}, die das Signal zur Produktion von Teilen geben, 
 und Transport-Kanban welche das Signal zum Transport von Teilen geben.
 Je nach den Gegebenheiten im Betrieb können diese auch kombiniert werden. Es gilt des Prinzip 'So einfach wie möglich.'
-\footnote{vgl. \cite{Geiger2011Kanban} S.40}
+\footnote{vgl. \cite{Geiger2011Kanban} S.40}\\
 
 Eine \textbf{Kanban-Tafel} hilft, die Übersichtlichkeit und Sicherheit des Systems zu gewährleisten. 
 Hier werden die Karten der leeren Behälter gesammelt und in Spalten oder Zeilen angeordnet.  
@@ -286,11 +304,11 @@ Grundsätzlich empfielt es sich daher vor allem in der Einführungsphase, den Ra
 welche bereits viel Erfahrung mit Kanban und JIT haben, und so die Fehler erkennen können.
 
 \section{Fazit und Ausblick}
-In der Arbeit wurde ein Überblick gegeben über die Just-in-Time-Produktion mit dem Kanban-system.
-Es wurde gezeigt, wie und mit welcher Motivation, diese Fertigungsmethode bei der japanischen Firma Toyota entwickelt wurde.
+In der Arbeit wurde ein Überblick über die Just-in-Time-Produktion mit dem Kanban-System gegeben.
+Es wurde gezeigt, wie und mit welcher Motivation diese Fertigungsmethode bei der japanischen Firma Toyota entwickelt wurde.
 Toyota hat bewiesen, dass man mit diesen Methoden erfolgreich am Markt bestehen kann und hat sich so zu einem der größten Automobilhersteller weltweit entwickelt.
 Das gesamte sog. Toyota-Produktionssystem umfasst aber noch viel mehr Aspekte, wie Autonomation (automatische Abschaltung bei Fehlern), 
-Details des Qualitätsmanagements, Standardisierte Arbeit, die '6 S', die 7 Verschwendungsarten oder die 3-Mu-Liste, um nur einige zu nennen. 
-Diese sind jedoch nicht Gegenstand dieser Arbeit gewesen und können in weiteren Arbeiten untersucht und dargestellt werden. Des weiteren könnte untersucht werden, 
-welche Verbreitung Kanban, JIT- bzw-. Lean-Production inzwischen gefunden haben und welche konkreten Verbesserungen dabei erreicht wurden.
+Details des Qualitätsmanagements, standardisierte Arbeit, die '6 S', die 7 Verschwendungsarten oder die 3-Mu-Liste, um nur einige zu nennen. 
+Diese sind jedoch nicht Gegenstand dieser Arbeit gewesen und können in weiteren Arbeiten untersucht und dargestellt werden. Des Weiteren könnte untersucht werden, 
+welche Verbreitung Kanban, JIT- bzw. Lean-Production inzwischen gefunden haben und welche konkreten Verbesserungen dabei erreicht wurden.
 
