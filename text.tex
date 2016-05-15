@@ -72,6 +72,15 @@ Anzahl der Teile pro Behälter, Art des Behälters, Produzent und Verbraucher de
 Die Anzahl von Kanban-Karten für ein Bauteil oder eine Bauteilgruppe ist begrenzt, auf diese Weise soll verhindert werden, dass zu viel auf Lager produziert wird.
 Der gesamte Produktionsprozess wird nun betrachtet als eine Aneinanderreihung von Quellen und Senken von Produktionsgütern, mit kleinen Zwischenlagern als Puffer.
 Eine Senke nimmt sich einen Behälter aus dem Zwischenlager (Pull-Prinzip), verarbeitet alle Teile darin und füllt selbst als Quelle das nachgelagerte Zwischenlager.
+(s. Abbildung \ref{flow})
+\begin{figure}[h]
+\centering
+\includegraphics[width=.80\textwidth]{img/flow.png}
+\caption[Regelkreise mit Fluß von Informationen und Material]{Regelkreise mit Fluß von Informationen und Material\footnotemark}
+\label{Flow}
+\end{figure}
+\footnotetext{eigene Darstellung}
+
 Hat das nachfolgende Zwischenlager einen bestimmten Höchststand überschritten, \emph{darf nicht} weiter produziert werden.
 Wird dagegen ein bestimmter Mindeststand unterschritten, so \emph{muss} wieder Nachschub produziert werden.
 Auf diese Weise werden Probleme oder Engpässe schnell sichtbar und es können entsprechende Gegenmaßnahmen unternommen werden.
@@ -81,10 +90,9 @@ Die Zwischenlager der einzelnen Produktionsstufen können auf einer \emph{Planta
 Für jede Produktionsstufe gibt es auf der Plantafel eine Spalte oder Zeile mit festen Plätzen für die Kanban-Karten.
 Die Karten der leeren Behälter werden hier für jeden sichtbar plaziert, so dass auf einen Blick der Bestand der Zwischenlager erkennbar wird.
 
-
 \section{Einführung von Kanban}
 \subsection{Problemstellung}
-Die Motivation für die Einführung der Just-in-Time-Produktion ist ist heute die gleiche wie im 20. Jahrhundert bei Toyota.
+Die Motivation für die Einführung der Just-in-Time-Produktion ist heute die gleiche wie im 20. Jahrhundert bei Toyota.
 Bei gleichbleibend hoher Qualität sollen Lieferfähigkeit und Flexibilität gesteigert werden.
 Ebenso sollen Durchlaufzeiten und Umlaufvermögen reduziert werden.\footnote{vgl. \cite{Geiger2011Kanban} S.12}
 Hinzu kommt heute noch, dass herkömmliche PPS-Systeme einen hohen Aufwand bedeuten, 
@@ -93,15 +101,17 @@ Dabei sind die eingesetzten IT-Systeme oft zu unflexibel und zu theoretisch.\foo
 Trotz Einsatz moderner Technik kommt es zu Unstimmigkeiten von tatsächlichem und theoretischem Bestand, 
 was eine Störung der Produktion zur Folge haben kann.
 Diese nicht wertschöpfenden Tätigkeiten können durch die Einrichtung der selbstregelnden 
-Steuerkreise eines Kanban-Systems eliminiert oder zumindest stark reduziert werden.\footnote{vgl. \cite{Geiger2011Kanban} S.13}\\
+Steuerkreise eines Kanban-Systems eliminiert oder zumindest stark reduziert werden.\footnote{vgl. \cite{Geiger2011Kanban} S.13}
 
 \subsection{Vorgehensweise}
 Die Einführung der JIT-Fertigung nach dem Kanban-System sollte immer schrittweise erfolgen,
 so hat man die Möglichkeit, zuerst in einem kleinen Teilbereich Erfahrung zu 
 sammeln und eventuell bereite erste Verbesserungen vorzunehmen. 
 Dabei fängt man gemäß dem Pull-Prinzip am Ende der Wertschöpfungskette an, 
-also dem Fertigteilelager oder der Endfertigung. Schrittweise wird das Kanban-System 
-dann auf die vorgelagerten Produktionstufen ausgeweitet, um zuletzt auch den Einkauf und die Lieferanten einzubeziehen.\footnote{vgl. \cite{Takeda2012SPS} S.194}
+also dem Fertigteilelager oder der Endfertigung. 
+In diesem Teilbereich organisiert sich ein Team von ca 10 Personen eigenständig, zunächst für Dauer 6-12 Monate.\\
+Schrittweise wird das Kanban-System dann auf die vorgelagerten Produktionstufen ausgeweitet, 
+um zuletzt auch den Einkauf und die Lieferanten einzubeziehen.\footnote{vgl. \cite{Takeda2012SPS} S.194}
 Von allen Beteiligten müssen die Kanban-Regeln verstanden sein und eingehalten werden. 
 Dazu müssen sie entsprechend geschult werden und können mit Planspielen auf die Umstellungen vorbereitet werden.
 Günstig ist es, die Regeln in einfacher Form für jeden sichtbar darzustellen und hier auch den 
@@ -116,6 +126,8 @@ Teile mit gleichmäßiger (X) oder moderat schwankender (Y) Nachfrage eignen sic
 Selten produzierte Teile und Teile mit stark schwankender Nachfrage hingegen sind nicht geeignet und sollten 
 weiterhin der herkömmlichen Fertigungsplanung unterliegen. Die starken Nachfrageschwankungen 
 würden die vorgelagerten Regelkreise stören und damit die Produktion der anderen Teile gefährden.\footnote{vgl. \cite{Geiger2011Kanban} S.27}
+Durch Standardisierung der Teile und Verkleinerung der Losgrössen kann hier 
+bereits eine Glättung der Produktion erfolgen, um mehr Teile Kanban-fähig zu machen. \footnote{vgl. \cite{Takeda2012SPS} S.7}
 
 \subsubsection{Verkleinerung der Losgrösse und Verkürzung der Rüstzeiten}
 Um die erforderliche Flexibilität an den einzelnen Fertigungsstufen zu erreichen, 
@@ -137,6 +149,12 @@ So ist es zum Beispiel Toyota gelungen, in seinem Hauptwerk die Zeit für Umrüs
 2-3 Stunden in den 1940er Jahren auf nur 3 Minuten im Jahr 1971 zu reduzieren! \footnote{vgl. \cite{Ohno2013TPS} S.32f}
 
 \subsection{Auswahl der Regelkreise}
+Hat man die Kanban-fähigen Teile identifiziert, so müssen als nächstes die Regelkreise festgelegt werden, welche mit dem Kanban-System gesteuert werden sollen.
+Dazu sollten zuerst von den betreffenden Abläufen Material- und Informationsflussdiagramme erstellt werden und die Prozessabläufe dargestellt werden.
+Hierbei kann bereits versucht werden, Optimierungsmöglichkeiten zu realisieren \footnote{vgl. \cite{Geiger2011Kanban} S.35}. 
+Schliesslich werden die am besten geeigneten Prozesse für die Kanban-Steuerung ausgewählt, 
+incl. Produzent und Verbraucher der Teile und ggf. der Zwischenlager.
+
 \subsection{Ermittlung der Kanban-Größen}
 Für die Kanban-Steuerung sind diese Kennzahlen relevant: Losgröße, Wiederbeschaffungszeit, 
 Sicherheitsbestand, Maximalbestand, Kanban-Standardmenge und Kanban-Anzahl.\footnote{vgl. \cite{Geiger2011Kanban} S.36}\\
@@ -184,13 +202,11 @@ Die \textbf{Anzahl der Kanban} ergibt sich aus den anderen Größen:\footnote{vg
  SM = Standardmenge\\
 Auch diese Kennzahl sollte möglichst klein gehalten werden. Sind zu viele Kanban-Karten im Umlauf so 
 werden die Schwachstellen im Produktions-System durch zu hohe Lagerbestände überdeckt.
-Nach Einführung des Kanban-Systems sollte im Rahmen des \textit{kontinuierlichen Verbesserungsprozess} (KVP bzw. Kaizen) 
-die Anzahl der Kanban schrittweise reduziert werden. 
 
-Glätten der Produktion, Verkleinerung der Losgrössen, Standardisierung der Teile (Takeda 2015, S. 7)\\
-zuerst in einem Teilbereich, ein Team von ca 10 Personen organisiert sich eigenständig, Dauer 6-12 Monate\\
-Höhe Verantwortung der einzelnen Mitarbeiter\\
-Kanban-Verantwortlicher prüft und korrigiert regelmäßig die Mengen.\\
+Nach Einführung des Kanban-Systems sollten im Rahmen des \textit{kontinuierlichen Verbesserungsprozess} (KVP bzw. Kaizen) 
+durch den Kanban-Verantwortlicher die Kanban-Größen regelmäßig geprüft und korrigiert reduziert werden. 
+
+
 
 \subsection{Auswahl der Kanban-Hilfsmittel}
 Produktions-Kanban, Transport-Kanban\\
