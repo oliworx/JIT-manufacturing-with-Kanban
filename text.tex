@@ -8,7 +8,7 @@ folgendenden Jahrzehnte das Toyota-Produktionssystem (TPS) entwickelt worden, de
 wesentliche Bestandteile heute auch unter den Begriffen  \emph{Just-in-Time} oder  
  \emph{Lean-Production} bekannt sind. Ein wichtiger Bestandteil des TPS ist das
 Kanban-System, das vor allem von Taiichi Ohno entwickelt wurde.
-\footnote{vgl. \cite{Ohno2013TPS}}\\
+\footnote{vgl. \cite{Ohno2013TPS} S.39}\\
 Die vorliegende Arbeit gibt eine Einführung in die wesentlichen Methoden, 
 Werkzeuge und Prinzipien des Kanban-Systems und wie mit Hilfe von Kanban eine
 Just-in-Time-Produktion umgesetzt werden kann. Im zweiten Abschnitt wird hierzu
@@ -55,7 +55,20 @@ Das Wort \emph{Kanban} besteht aus den zwei Zeichen {\CN 看} ( \emph{kan}=sehen
  und {\CN 板} (\emph{ban}=Tafel, Brett) und läßt sich etwa mit Sichttafel, 
  Aushängeschild oder auch Pendelkarte übersetzen.
 
-Im Produktionsprozess steht jede Kanban-Karte für einen Behälter einer bestimmten Grösse, der eine festgelegt Anzahl von Bauteilen enthält.
+Im Produktionsprozess steht jede Kanban-Karte für einen Behälter einer bestimmten Größe, der eine festgelegt Anzahl von Bauteilen enthält.
+Die Kanban-Karte wird an dem entsprechenden gefüllten Behälter befestigt oder eingesammelt und wieder zurück zum 
+Produzenten der Teile gebracht, als Information dafür, dass wieder neue Teile benötigt werden. 
+Dafür muss die Kanban-Karte verschiedene Informationen enthalten, wie Bezeichnung und Nummer der Teile, 
+Anzahl der Teile pro Behälter, Art des Behälters, Produzent und Verbraucher der Teile und ggf. auch Strichcodes für die elektonische Datenerfassung.
+(s. Abbildung \ref{Kanbankarte})
+\begin{figure}[h]
+\centering
+\includegraphics[width=.60\textwidth]{img/kanban-karte.png}
+\caption[Beispiel einer Kanban-Karte]{Beispiel einer Kanban-Karte\footnotemark}
+\label{Kanbankarte}
+\end{figure}
+\footnotetext{Quelle: http://www.lean-production-expert.de/lean-production/kanban-kartengestaltung.html}
+
 Die Anzahl von Kanban-Karten für ein Bauteil oder eine Bauteilgruppe ist begrenzt, auf diese Weise soll verhindert werden, dass zu viel auf Lager produziert wird.
 Der gesamte Produktionsprozess wird nun betrachtet als eine Aneinanderreihung von Quellen und Senken von Produktionsgütern, mit kleinen Zwischenlagern als Puffer.
 Eine Senke nimmt sich einen Behälter aus dem Zwischenlager (Pull-Prinzip), verarbeitet alle Teile darin und füllt selbst als Quelle das nachgelagerte Zwischenlager.
@@ -88,13 +101,14 @@ so hat man die Möglichkeit, zuerst in einem kleinen Teilbereich Erfahrung zu
 sammeln und eventuell bereite erste Verbesserungen vorzunehmen. 
 Dabei fängt man gemäß dem Pull-Prinzip am Ende der Wertschöpfungskette an, 
 also dem Fertigteilelager oder der Endfertigung. Schrittweise wird das Kanban-System 
-dann auf die vorgelagerten Produktionstufen ausgeweitet, um zuletzt auch die Lieferanten einzubeziehen.\footnote{vgl. \cite{Takeda2012SPS} S.194}
+dann auf die vorgelagerten Produktionstufen ausgeweitet, um zuletzt auch den Einkauf und die Lieferanten einzubeziehen.\footnote{vgl. \cite{Takeda2012SPS} S.194}
 Von allen Beteiligten müssen die Kanban-Regeln verstanden sein und eingehalten werden. 
+Dazu müssen sie entsprechend geschult werden und können mit Planspielen auf die Umstellungen vorbereitet werden.
 Günstig ist es, die Regeln in einfacher Form für jeden sichtbar darzustellen und hier auch den 
 Kanban-Beauftragten als Ansprechpartner bei Fragen und Problemen zu benennen.
 
-\subsection{Kanban-Fähigkeit}
-\subsubsection{Kanban-Teile}
+\subsection{Herstellen der Kanban-Fähigkeit}
+\subsubsection{Ermittlung der Kanban-Teile}
 Für Kanban eignen sich grundsätzlich A-, B- und C-Teile, wobei sich bei den sehr 
 werthaltigen A-Teilen die Vorteile von Kanban am ehesten zeigen. \footnote{vgl. \cite{Geiger2011Kanban} S.29}
 Die infrage kommenden Teile müssen auch einer XYZ-Analyse unterzogen werden. 
@@ -123,18 +137,60 @@ So ist es zum Beispiel Toyota gelungen, in seinem Hauptwerk die Zeit für Umrüs
 2-3 Stunden in den 1940er Jahren auf nur 3 Minuten im Jahr 1971 zu reduzieren! \footnote{vgl. \cite{Ohno2013TPS} S.32f}
 
 \subsection{Auswahl der Regelkreise}
-\subsection{Berechnung der Kanban-Grössen}
+\subsection{Ermittlung der Kanban-Größen}
+Für die Kanban-Steuerung sind diese Kennzahlen relevant: Losgröße, Wiederbeschaffungszeit, 
+Sicherheitsbestand, Maximalbestand, Kanban-Standardmenge und Kanban-Anzahl.\footnote{vgl. \cite{Geiger2011Kanban} S.36}\\
 
+Wie bereits erwähnt sollte die \textbf{Losgröße} soweit wie möglich reduziert werden. Die positiven Effekte daraus sind  
+höhere Flexibilität, geringere Lagerhaltungskosten, bessere Kundenorientierung, 
+geringeres Abschreibungsrisiko, Vorteile beim Handling und Motivation der Mitarbeiter durch 
+abwechslungsreichere Tätigkeit.\footnote{\cite{Geiger2011Kanban} S.36}\\
+
+Für die \textbf{Wiederbeschaffungszeit} kann man die Erfahrungswerte mit den vorgelagerten Fertigungsstufen heranziehen.
+Falls die Teile extern eingekauft werden, so muss mit dem Lieferanten eine realistische Wiederbeschaffungszeit vereinbart werden.\\
+
+Der \textbf{Sicherheitsbestand} muss die Versorgung mit Teilen während der Wiederbeschaffungszeit ermöglichen.\\
+\centerline{\textit{SBZ = DV * ( WBZ + SZ )}}
+SB=Sicherheitsbestand\\
+DV=Durchschnittsverbrauch pro Zeiteinheit\\
+WBZ=Wiederbeschaffungszeit (in Zeiteinheiten)\\
+SZ=Sicherheitszuschlag (in Zeiteinheiten)\\
+Der Sicherheitszuschlag soll unvorhergesehene Bedarfsschwankungen oder Lieferprobleme
+ausgleichen und sollte möglichst niedrig gewählt werden.\\
+
+Die \textbf{Maximale Bestandsmenge} gibt an, wie viele Teile maximal im jeweiligen Kanban-Kreis vorhanden sein können.\footnote{vgl. \cite{Geiger2011Kanban} S.38}
+
+\centerline{\textit{MB = WBZ * DV + BM + SB}}
+ MB=Maximale Bestandsmenge\\
+ WBZ=Wiederbeschaffungszeit (in Zeiteinheiten)\\
+ DV=Durchschnittsverbrauch pro Zeiteinheit\\
+ BM=Bestellmenge bzw. Losgröße\\
+ SB=Sicherheitsbestand\\
+Die Maximale Bestandsmenge sollte auch so weit wie möglich reduziert werden, da der Wert die Durchlaufzeit und das Umlaufvermögen beeinflußt.\\
+
+Die \textbf{Kanban-Standardmenge} ist die Menge, die duch ein Kanban angefordert wird.
+Sie sollte am besten einem vollen Behälter entsprechen und sich an der Losgröße orientieren.
+Sollte die Losgröße grösser sein, z.B. weil bei einem Lieferanten immer eine bestimmte Mindestmenge angefordert werden muss, 
+so werden die Kanban gesammelt, bis die Losgröße erreicht ist.\\
+
+Die \textbf{Anzahl der Kanban} ergibt sich aus den anderen Größen:\footnote{vgl. \cite{Geiger2011Kanban} S.39}
+
+\centerline{\textit{AK = (DV * WBZ + (1 + SF) ) / SM}}
+
+ AK=Anzahl Kanban\\
+ DV=Durchschnittsverbrauch pro Zeiteinheit\\
+ WBZ=Wiederbeschaffungszeit (in Zeiteinheiten)\\
+ SF = Sicherheitsfaktor\\
+ SM = Standardmenge\\
+Auch diese Kennzahl sollte möglichst klein gehalten werden. Sind zu viele Kanban-Karten im Umlauf so 
+werden die Schwachstellen im Produktions-System durch zu hohe Lagerbestände überdeckt.
+Nach Einführung des Kanban-Systems sollte im Rahmen des \textit{kontinuierlichen Verbesserungsprozess} (KVP bzw. Kaizen) 
+die Anzahl der Kanban schrittweise reduziert werden. 
 
 Glätten der Produktion, Verkleinerung der Losgrössen, Standardisierung der Teile (Takeda 2015, S. 7)\\
 zuerst in einem Teilbereich, ein Team von ca 10 Personen organisiert sich eigenständig, Dauer 6-12 Monate\\
 Höhe Verantwortung der einzelnen Mitarbeiter\\
 Kanban-Verantwortlicher prüft und korrigiert regelmäßig die Mengen.\\
-
-Mit grösserer Anzahl von Kanban beginnen, schrittweise reduzieren (Geiger et al 2011)\\
-Schrittweise Verbesserungen vornehmen, aus Fehlern lernen.\\
-Nach und nach auf andere Produktionsbereiche ausdehnen\\
-Schließlich Einkauf und Lieferanten einbeziehen.\\
 
 \subsection{Auswahl der Kanban-Hilfsmittel}
 Produktions-Kanban, Transport-Kanban\\
@@ -152,6 +208,7 @@ Stellflächen\\
 
 \section{Kaizen: kontinuierliche Verbesserung}
 - Permanentes überprüfen auf Optimierungspotential.\\
+Mit grösserer Anzahl von Kanban beginnen, schrittweise reduzieren (Geiger et al 2011)\\
 - Für alle sichtbare Visualisierung der Kennzahlen aus den Bereichen Mitarbeiter, Bestände, Kunden, Qualität, Sicherheit, Rüstzeiten\\
 - Alle Mitarbeiter in KVP einbeziehen.\\
 - Jeder kann Vorschläge machen.\\
