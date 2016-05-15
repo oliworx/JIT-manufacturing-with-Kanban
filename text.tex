@@ -22,7 +22,6 @@ eingegangen und ein Ausblick auf die zu erwartende künftige Entwicklung gegeben
 Für die Erstellung dieser Arbeit wurde auf relevante Fachliteratur zurückgegriffen
 und teilweise auch im Internet recherchiert.
 
-
 \section{Geschichte und Entwicklung von Kanban}
 
 Das Toyota-Produktionssystem entand im Japan der Nachkriegszeit 
@@ -204,23 +203,42 @@ Auch diese Kennzahl sollte möglichst klein gehalten werden. Sind zu viele Kanba
 werden die Schwachstellen im Produktions-System durch zu hohe Lagerbestände überdeckt.
 
 Nach Einführung des Kanban-Systems sollten im Rahmen des \textit{kontinuierlichen Verbesserungsprozess} (KVP bzw. Kaizen) 
-durch den Kanban-Verantwortlicher die Kanban-Größen regelmäßig geprüft und korrigiert reduziert werden. 
-
-
+durch den Kanban-Verantwortlicher die Kanban-Größen regelmäßig geprüft und korrigiert werden. 
 
 \subsection{Auswahl der Kanban-Hilfsmittel}
-Produktions-Kanban, Transport-Kanban\\
-Kanban-Karten\\
-Kanban-Tafel\\
-Behälter\\
-Transportwagen\\
-Stellflächen\\
--Karten, Tafel, Behälter, Stellflächen, Signallampen\\
--Gitterboxen, Europaletten, Kartonagen...\\
+Die \textbf{Kanban-Karten} sind der eigentliche Namensgeber des Kanban-Systems und dienen der einfachen Informationsübertragung.
+Jede Karte muss dazu mindestens diese Angaben enthalten: Verbraucher, Lieferant, Artikelbezeichnung, Artikelnummer, 
+Angaben zum Behältnis und Mengenangaben (s. Abbildung \ref{Kanbankarte}). 
+Zur erleichterten Datenerfassung kann auch ein Strich- oder QR-Code aufgedruckt sein.
+Auch eine automatisierte und berührungslose Datenerfassung mittels Funketiketten (RFID) wird heute praktiziert.\footnote{vgl. \cite{Weber2014KE} S.100}
+Sind weitere Angaben für einen sicheren und zuverlässigen Ablauf erforderlich, so sollten diese auch aufgenommen werden.
+\footnote{vgl. \cite{Geiger2011Kanban} S.41}
+Es gibt \textit{Produktions-Kanban}, die das Signal zur Produktion von Teilen geben, 
+und Transport-Kanban welche das Signal zum Transport von Teilen geben.
+Je nach den Gegebenheiten im Betrieb können diese auch kombiniert werden. Es gilt des Prinzip 'So einfach wie möglich.'
+\footnote{vgl. \cite{Geiger2011Kanban} S.40}
+
+Eine \textbf{Kanban-Tafel} hilft, die Übersichtlichkeit und Sicherheit des Systems zu gewährleisten. 
+Hier werden die Karten der leeren Behälter gesammelt und in Spalten oder Zeilen angeordnet.  
+Auf der Kanban-Tafel gibt es grüne, gelbe und rote Bereiche, so dass auf einen Blick erkennbar ist, wann neue Teile gefertigt werden müssen. (roter Bereich).
+Im gelben Bereich kann der Verantwortliche selber entscheiden, ob er schon neue Teile produziert oder noch abwartet.\\
+
+Die \textbf{Behälter} dienen dem Transport und der Lagerung der Teile, idealerweise kann für beides der gleiche 
+Behälter verwendet werden, so dass die Teile nicht umgefüllt werden müssen. Behälter sollten 
+zweckmäßig sein und orientieren sich an den Gegebenheiten vor Ort und den Eigenschaften der Teile, 
+die Anzahl der Teile pro Behälter sollte der Losgröße entsprechen.
+Für kleine C-Teile eignen sich kleine Plastik-Boxen, für größere Teile können Eurogitterboxen 
+oder Transportwägen verwendet werden.\\
+Behälter können auch gleichzeitig als Signal verwendet werden und somit die Kanban-Karten ersetzen: ein leerer 
+Behälter ist ein Signal zur Produktion neuer Teile und muss von der Quelle unbedingt 
+wieder in der vereinbarten Zeit mit neuen Teilen befüllt werden.\\
+Auch Europaletten können als 'Behälter' im Sinne von Kanban verwendet werden, z.B. für grössere und schwere Teile.
+Bei der Verwendung von Paletten können Stellflächen (des Zwischenlagers beim Verbraucher) als Signale dienen: 
+ist nur noch eine Stellfläche mit einer Palette belegt, so muss nachgeliefert werden, sind alle Stellflächen belegt, 
+darf nicht weiter produziert werden, dazwischen befindet sich der 'gelbe Bereich'.
 
 \subsection{Erfassung von Daten}
 -Zur Kontrolle, Erstellung von Metriken, für PPS-System\\
--elektronische Systeme: Barcode, QR-Code, RFID-Etiketten (Funk)\\
 
 \section{Kaizen: kontinuierliche Verbesserung}
 - Permanentes überprüfen auf Optimierungspotential.\\
